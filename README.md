@@ -30,7 +30,8 @@ UPDATE Nashville_Housing
 SET SaleDateConverted = CONVERT(Date, SaleDate)
 ```
 
-![[1446-02-17 19_37_00-Nashville_Housing_Data_Cleaning_Project.sql.png]]
+![1446-02-17 19_37_00-Nashville_Housing_Data_Cleaning_Project sql](https://github.com/user-attachments/assets/7afa1b3e-b826-4c53-b7a7-007efd412f77)
+
 
 ## Populate Property Address Data
 ---
@@ -55,8 +56,9 @@ JOIN Nashville_Housing b
 	AND a.[UniqueID ] <> b.[UniqueID ]
 WHERE a.PropertyAddress IS NULL
 ```
+![1446-02-17 19_43_39-Nashville_Housing_Data_Cleaning_Project sql](https://github.com/user-attachments/assets/d21a05ba-6aa7-4c8d-9e0a-1da76396b00b)
 
-![[1446-02-17 19_43_39-Nashville_Housing_Data_Cleaning_Project.sql.png]]
+
 Output is empty because there are no longer NULL values in the PropertyAddress column
 
 
@@ -122,7 +124,8 @@ SELECT *
 FROM Nashville_Housing
 ```
 
-![[1446-02-17 19_47_34-Nashville_Housing_Data_Cleaning_Project.sql.png]]
+![1446-02-17 19_47_34-Nashville_Housing_Data_Cleaning_Project sql](https://github.com/user-attachments/assets/60f1f835-fbb1-45ad-90db-bcbf2d0da806)
+
 
 ## Change Y and N to Yes and No in "Sold as Vacant" field
 ---
@@ -146,7 +149,8 @@ SET SoldAsVacant = CASE WHEN SoldAsVacant = 'Y' THEN 'Yes'
 		END
 ```
 
-![[1446-02-17 19_49_31-Nashville_Housing_Data_Cleaning_Project.sql.png]]
+![1446-02-17 19_49_31-Nashville_Housing_Data_Cleaning_Project sql](https://github.com/user-attachments/assets/47df103b-3f41-42a1-b3aa-3489feb1a1de)
+
 
 ## Remove Duplicates
 ---
@@ -175,7 +179,8 @@ SELECT *
 FROM Nashville_Housing
 ```
 
-![[1446-02-17 19_51_18-Nashville_Housing_Data_Cleaning_Project.sql.png]]Output is empty because there are no longer duplicate rows in our dataset
+![1446-02-17 19_51_18-Nashville_Housing_Data_Cleaning_Project sql](https://github.com/user-attachments/assets/b7110534-0cc4-4f45-ac51-3eee0eb0cdb7)
+Output is empty because there are no longer duplicate rows in our dataset
 
 ## Delete Unused Columns
 ---
@@ -188,4 +193,4 @@ ALTER TABLE Nashville_Housing
 DROP COLUMN OwnerAddress, PropertyAddress, SaleDate
 ```
 
-![[1446-02-17 19_52_42-Nashville_Housing_Data_Cleaning_Project.sql.png]]
+![1446-02-17 19_52_42-Nashville_Housing_Data_Cleaning_Project sql](https://github.com/user-attachments/assets/e9351178-ebbf-43d0-bcb4-b5d28b9a0717)
