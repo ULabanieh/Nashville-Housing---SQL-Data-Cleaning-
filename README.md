@@ -1,4 +1,4 @@
-# Project Overview
+# 🏡 Project Overview
 ---
 This is a data cleaning project about a dataset of house listings in the city of Nashville, USA. The project contains different types of data cleaning and transformation procedures that serve to make the data more readable, understandable and easier to work with. I will show you here an overview of the most important queries and parts of the project. For the full detailed project, feel free to download the project files. 
 
